@@ -30,7 +30,7 @@ points = PoolVector2Array( 16, 16, 0.0940933, 16, 0.0940933, 0, 16, 0 )
 
 [node name="Level" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Ground" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
