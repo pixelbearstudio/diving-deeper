@@ -23,6 +23,13 @@ _global_script_class_icons={
 config/name="diving-deeper"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=320
+window/size/height=180
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [editor]
 
 version_control_autoload_on_startup=true
@@ -31,6 +38,13 @@ version_control_plugin_name="GitAPI"
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[layer_names]
+
+2d_render/layer_1="player"
+2d_render/layer_2="level"
+2d_render/layer_3="scenario"
+2d_render/layer_4="enemies"
 
 [physics]
 
