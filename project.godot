@@ -25,6 +25,10 @@ run/main_scene="res://src/scenes/Level.tscn"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 
+[audio]
+
+default_bus_layout=""
+
 [display]
 
 window/size/width=1200

@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/actors/player/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/Idle_1 (32 x 32).png" type="Texture" id=2]
 [ext_resource path="res://assets/player/Run (32 x 32).png" type="Texture" id=3]
 [ext_resource path="res://src/scripts/player_texture.gd" type="Script" id=4]
+[ext_resource path="res://src/actors/player/Camera.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 8.0
@@ -241,3 +242,13 @@ anims/RESET = SubResource( 2 )
 anims/idle = SubResource( 3 )
 anims/move = SubResource( 5 )
 anims/run = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource( 5 )
