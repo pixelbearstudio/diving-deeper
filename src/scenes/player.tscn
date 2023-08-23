@@ -227,13 +227,11 @@ gravity_speed = 150
 stamina = 150
 
 [node name="Texture" type="Sprite" parent="."]
-position = Vector2( 166, 158 )
 texture = ExtResource( 2 )
 hframes = 5
 script = ExtResource( 4 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2( 166, 160 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
