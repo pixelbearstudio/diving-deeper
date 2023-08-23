@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-#onready var sprite: Sprite = get_node("sprite")
+onready var sprite: Sprite = get_node("Texture")
 
 var velocity: Vector2
 
@@ -12,13 +12,14 @@ func _physics_process(delta: float) -> void:
 	move()
 	jump(delta)
 	velocity = move_and_slide(velocity)
+	sprite.animate(velocity)
 	
 func move() -> void:
 	if Input.get_action_strength("ui_select"):
 		velocity.x = run_speed * get_direction()
 	else:
 		velocity.x = move_speed * get_direction()
-		
+			
 func jump(delta: float) -> void:
 	velocity.y += delta * gravity_speed
 
