@@ -223,6 +223,7 @@ script = ExtResource( 1 )
 move_speed = 90
 run_speed = 150
 gravity_speed = 150
+stamina = 150
 
 [node name="Texture" type="Sprite" parent="."]
 position = Vector2( 166, 158 )
