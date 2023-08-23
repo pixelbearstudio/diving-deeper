@@ -241,7 +241,7 @@ anims/idle = SubResource( 3 )
 anims/move = SubResource( 5 )
 anims/run = SubResource( 4 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="PlayersCamera" type="Camera2D" parent="."]
 current = true
 limit_smoothed = true
 drag_margin_h_enabled = true

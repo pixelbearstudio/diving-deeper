@@ -30,7 +30,10 @@ func move() -> void:
 		stamina -= 0.05
 	else:
 		velocity.x = move_speed * get_direction()
-			
+
+	# Impede que o player saia da tela pela esquerda
+	position.x = clamp(position.x, $PlayersCamera.limit_left + 8, $PlayersCamera.limit_right)
+
 func jump(delta: float) -> void:
 	velocity.y += delta * gravity_speed
 
