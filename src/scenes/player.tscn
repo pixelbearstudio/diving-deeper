@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/actors/player/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/player/Idle_1 (32 x 32).png" type="Texture" id=2]
 [ext_resource path="res://assets/player/Run (32 x 32).png" type="Texture" id=3]
 [ext_resource path="res://src/scripts/player_texture.gd" type="Script" id=4]
 [ext_resource path="res://src/actors/player/Camera.gd" type="Script" id=5]
+[ext_resource path="res://assets/player/step.wav" type="AudioStream" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 8.0
@@ -165,6 +166,24 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 1, 2, 3, 4, 5 ]
 }
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.2, 0.7 )
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "run"
@@ -218,6 +237,24 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 1, 2, 3, 4, 5 ]
 }
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.00722263,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+}, {
+"end_offset": 0.00645839,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+} ],
+"times": PoolRealArray( 0.15669, 0.408611 )
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -250,3 +287,7 @@ smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
